@@ -6,9 +6,9 @@ st.title("Konverter")
 tab1, tab2 = st.tabs(["Feet ↔ Meter", "Fahrenheit ↔ Celsius"])
 
 with tab1:
-    richtung = st.radio("Richtung", ["ft → m", "m → ft"], horizontal=True, key="r1")
+    richtung = st.radio("Richtung", ["feet → meter", "meter → feet"], horizontal=True, key="r1")
 
-    if richtung == "ft → m":
+    if richtung == "feet → meter":
         feet = st.number_input("Feet", value=100.0, format="%.1f")
         st.metric("Meter", f"{feet * 0.3048:.1f} m")
     else:
@@ -16,9 +16,9 @@ with tab1:
         st.metric("Feet", f"{meter / 0.3048:.1f} ft")
 
 with tab2:
-    richtung = st.radio("Richtung", ["°F → °C", "°C → °F"], horizontal=True, key="r2")
+    richtung = st.radio("Richtung", ["°Fahrenheit → °Celsius", "°Celsius → °Fahrenheit"], horizontal=True, key="r2")
 
-    if richtung == "°F → °C":
+    if richtung == "°Fahrenheit → °Celsius":
         f = st.number_input("Fahrenheit", value=69.0, format="%.1f")
         st.metric("Celsius", f"{(f - 32) * 5 / 9:.1f} °C")
     else:
