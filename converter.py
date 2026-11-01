@@ -8,7 +8,7 @@ with tab1:
     richtung = st.radio("Richtung", ["feet → meter", "meter → feet"], horizontal=True, key="r1")
 
     if richtung == "feet → meter":
-        feet = st.number_input("Feet", value=100.0, step=1.0, format="%.1f")
+        feet = st.number_input("Feet", value=100.0, step=10.0, format="%.1f")
         st.metric("Meter", f"{feet * 0.3048:.1f} m")
     else:
         meter = st.number_input("Meter", value=10.0, step=1.0, format="%.1f")
