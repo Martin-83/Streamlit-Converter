@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-st.title("Umrechner")
+st.title("Konverter")
 
 tab1, tab2 = st.tabs(["Feet ↔ Meter", "Fahrenheit ↔ Celsius"])
 
